@@ -1,0 +1,10 @@
+.footerbar{
+    position:fixed  ;
+    bottom: 0px;
+    margin: 3rem 0 0 0;
+    color: white;
+    background-color: #242526;
+    width: 100%;
+    padding: 0.2rem;
+    text-align: center;
+}
