@@ -5,7 +5,7 @@ export default function Footer() {
 
     return (
         <div className='footerbar'>
-                Made with ❤️ by Dishant Rathi
+                Made with ❤️ by Jaswant Singh
         </div>
     )
 }
