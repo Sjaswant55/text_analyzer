@@ -34,6 +34,12 @@ export default function TextForm(props) {
         setText(newText.join(" "));
         props.showAlert("Extra spaces removed!", "success");
     }
+   const handleSort = () => {
+    let newText = text.split(""); // Convert the string to an array of characters
+    newText.sort(); // Sort the array of characters
+    setText(newText.join("")); // Join the sorted array back into a string
+    props.showAlert("String sorted!", "success"); // Show success alert
+   }
 
     const [text, setText] = useState(''); 
     // text = "new text"; // Wrong way to change the state
@@ -50,6 +56,7 @@ export default function TextForm(props) {
             <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleClearClick}>Clear Text</button>
             <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy Text</button>
             <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+            <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleSort}>Sort String</button>
         </div>
         <div className="container my-3" style={{color: props.mode==='dark'?'white':'#042743'}}>
             <h2>Your text summary</h2>
